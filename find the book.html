@@ -1,0 +1,73 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function books(bookname,bookauthor,bookyear,bookgener,bookprice){
+this.bookname=bookname,
+this.bookauthor=bookauthor,
+this.bookyear=bookyear,
+this.bookgener=bookgener,
+this.bookprice=bookprice
+}
+var b1=new books("The Great Gatsby","F. Scott Fitzgerald",1925,"fiction",1500);
+var b2=new books("To Kill a Mockingbird","Harper Lee",1960,"fiction",1100);
+var b3=new books("Jane Eyre","Charlotte Brontë",1847,"fiction",1800);
+var b4=new books("The Silent Patient","Alex Michaelides",2019,"thriller",2000);
+var b5=new books("Gone Girl","Gillian Flynn",2012,"thriller",1300);
+var b6=new books("The Guest List","Lucy Foley",2020,"thriller",1900);
+var b7=new books("The Last Mughal","William Dalrymple",2006,"ithihas",1000);
+var b8=new books("The Guns of August","Barbara W. Tuchman",1962,"ithihas",1250);
+var b9=new books("History of Mediaeval India","Satish Chandra",1975,"ithihas",2300);
+var b10=new books("Steve Jobs","Walter Isaacson",2011,"biography",1900);
+
+var booklist=[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10];
+var n=parseInt(prompt("enter 1 for fiction  and 2 for thriller  and 3 for ithihas and 4 for biography"));
+var c=n;
+switch(c)
+{
+case 1:var fiction=booklist.filter((item)=>{return item.bookgener=="fiction"})
+for(di of fiction)
+{
+for(hii in di)
+{
+document.write(hii+":"+di[hii]+"<br>");
+}
+document.write("<br><br><br>");
+};
+break;
+case 2:var fiction=booklist.filter((item)=>{return item.bookgener=="thriller"})
+for(di of fiction)
+{
+for(hii in di)
+{
+document.write(hii+":"+di[hii]+"<br>");
+}
+document.write("<br><br><br>");
+};
+break;
+case 3:var fiction=booklist.filter((item)=>{return item.bookgener=="ithihas"})
+for(di of fiction)
+{
+for(hii in di)
+{
+document.write(hii+":"+di[hii]+"<br>");
+}
+document.write("<br><br><br>");
+};
+case 4:case 3:var fiction=booklist.filter((item)=>{return item.bookgener=="biography"})
+for(di of fiction)
+{
+for(hii in di)
+{
+document.write(hii+":"+di[hii]+"<br>");
+}
+document.write("<br><br><br>");
+}
+break;
+default:alert("invalid");
+}
+
+</script>
+</body>
+</html>
